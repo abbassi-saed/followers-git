@@ -1,0 +1,15 @@
+<br>
+<div *ngFor="let item of followers">
+<table width="100%" cellspacing="1" cellpadding="5">
+    <tr>
+        <img src="{{item.avatar_url}}" alt="Avatar" class="avatar">
+    <td>{{item.login}}</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td><a [routerLink]="['/followers',item.id,item.login]"
+        [queryParams] ="{page: 1,type:item.type,var :'value'}"
+        >{{item.avatar_url}}</a></td>
+    </tr>
+    </table>
+</div>
